@@ -1,7 +1,45 @@
-.loading{
+body{
+    background-color: rgb(210, 214, 223);
+}
+.loading {
     width: 100%;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.products {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+    row-gap: 2rem;
+}
+.Individual-Products {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    height: 100%;
+    border: 2px solid blue;
+    /* margin-bottom: 2rem; */
+}
+.Individual-Products img{
+    width: 100%;
+    height: 25rem;
+    object-fit: contain;
+    border-radius: 20px;
+}
+@media screen and (min-width:425px) {
+    .products {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .products {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+}
+

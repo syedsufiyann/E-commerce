@@ -1,9 +1,12 @@
-function ProductCard({thisproduct}) {
+function ProductCard({ product }) {
     return (
-        <div>
-            <p>{thisproduct.id} - {thisproduct.title}</p>
-            <img src={thisproduct.image} alt="" width={100}/>
-            
+        <div >
+            <div className="Individual-Products">
+                <p>Category: {product.category}</p>
+                <img src={product.image} alt=""  />
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+            </div>
         </div>
     )
 }

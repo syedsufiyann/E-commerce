@@ -36,7 +36,8 @@ function Product() {
             products.map((product) => {
                 return (
                     <ProductCard
-                    thisproduct={product}
+                        key={product.id}
+                        product={product}
                     />
                 )
             })
@@ -44,8 +45,9 @@ function Product() {
     }
     return (
         <>
-            <h2>Below are Prods:</h2>
-            {renderProducts()}
+            <div className="products">
+                {renderProducts()}
+            </div>
         </>
     )
 }
