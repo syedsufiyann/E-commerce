@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Pro.css"
 
 function Product() {
-    const [product, setProduct] = useState([]);
+    const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const fetchApi = async ()=>{
         setLoading(true)
@@ -12,8 +12,6 @@ function Product() {
             const data = await response.json();
             console.log(data);
             setProduct(data)
-            
-            
         }
         catch(error){
             console.error("Error: "+error);
@@ -29,7 +27,6 @@ function Product() {
         return (
             <div className="loading">
                 <h2>Products are loading...</h2>
-
             </div>
 
         )
@@ -38,7 +35,7 @@ function Product() {
     return (
         <>
             <h2>I am Product...</h2>
-            {product[2].title}
+            {products[2].title}
         </>
     )
 }
