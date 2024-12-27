@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import "./Pro.css"
+import ProductCard from "./ProductCard";
 
 function Product() {
     const [products, setProduct] = useState([]);
@@ -33,11 +34,11 @@ function Product() {
     const renderProducts = () => {
         return (
             products.map((product) => {
-                return (<div key={product.id}>
-                    <p>{product.id}</p>
-                    <p>Product Title: {product.title}</p>
-                    <p>Product Description: {product.description}</p>
-                </div>)
+                return (
+                    <ProductCard
+                    thisproduct={product}
+                    />
+                )
             })
         )
     }
