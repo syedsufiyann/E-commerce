@@ -5,37 +5,46 @@ import "./Pro.css"
 function Product() {
     const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
-    const fetchApi = async ()=>{
+    const fetchApi = async () => {
         setLoading(true)
-        try{
+        try {
             const response = await fetch("https://fakestoreapi.com/products");
             const data = await response.json();
             console.log(data);
             setProduct(data)
         }
-        catch(error){
-            console.error("Error: "+error);
+        catch (error) {
+            console.error("Error: " + error);
         }
-        finally{
+        finally {
             setLoading(false)
         }
     };
-    useEffect(()=>{
+    useEffect(() => {
         fetchApi();
-    },[])
-    if(loading){
+    }, [])
+    if (loading) {
         return (
             <div className="loading">
                 <h2>Products are loading...</h2>
             </div>
-
         )
     }
-
+    const renderProducts = () => {
+        return (
+            products.map((product) => {
+                return (<div key={product.id}>
+                    <p>{product.id}</p>
+                    <p>Product Title: {product.title}</p>
+                    <p>Product Description: {product.description}</p>
+                </div>)
+            })
+        )
+    }
     return (
         <>
-            <h2>I am Product...</h2>
-            {products[2].title}
+            <h2>Below are Prods:</h2>
+            {renderProducts()}
         </>
     )
 }
