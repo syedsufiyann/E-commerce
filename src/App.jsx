@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-      <h2 style={{textAlign:"center"}}>E-commerce App</h2>
       <Product/>
     </>
   )

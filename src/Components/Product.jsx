@@ -6,6 +6,7 @@ import ProductCard from "./ProductCard";
 function Product() {
     const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [cartItems, setCartItems] = useState([]);
     const fetchApi = async () => {
         setLoading(true)
         try {
@@ -31,20 +32,29 @@ function Product() {
             </div>
         )
     }
+    const addtoCart = (item) => {
+        setCartItems([...cartItems, item]);
+    }
     const renderProducts = () => {
         return (
             products.map((product) => {
+                const isProductPresent = cartItems.find((cartItem) => cartItem.id == product.id)
                 return (
                     <ProductCard
                         key={product.id}
                         product={product}
+                        addtoCart={addtoCart}
+                        isProductPresent={isProductPresent}
                     />
                 )
             })
         )
     }
+
     return (
         <>
+            <h2 style={{ textAlign: "center" }}>E-commerce App</h2>
+            <h2 style={{ textAlign: "center" }}>Cart-Item Count:{cartItems.length}</h2>
             <div className="products">
                 {renderProducts()}
             </div>
