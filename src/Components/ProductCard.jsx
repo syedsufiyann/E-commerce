@@ -7,7 +7,7 @@ function ProductCard({ product, addtoCart, isProductPresent}) {
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <div className="Price-Btn">
-                    <span>Price:₹{product.price}</span>
+                    <span>Price: ${product.price}</span>
                     <button onClick={()=>addtoCart(product)} disabled={isProductPresent}>Add to cart</button>
 
                 </div>
