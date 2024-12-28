@@ -33,9 +33,6 @@ body{
     text-align: center;
     align-items: center;
 }
-.Price-Btn span{
- /* text-align: center; */
-}
 .Price-Btn button{
     padding: 1rem;
     border-radius: 20px;

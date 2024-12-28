@@ -34,6 +34,8 @@ function Product() {
     }
     const addtoCart = (item) => {
         setCartItems([...cartItems, item]);
+        console.log(item);
+        
     }
     const renderProducts = () => {
         return (
