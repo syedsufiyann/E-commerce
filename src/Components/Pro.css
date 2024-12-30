@@ -1,6 +1,8 @@
 body{
     background-color: rgb(210, 214, 223);
+    margin: 0 5%;
 }
+
 .loading {
     width: 100%;
     height: 90vh;
@@ -11,7 +13,7 @@ body{
 .products {
     display: grid;
     grid-template-columns: 100%;
-    gap: 4rem 2rem;
+    gap: 2% 1%;
 }
 .Individual-Products {
     background-color: white;
@@ -33,6 +35,14 @@ body{
     text-align: center;
     align-items: center;
 }
+p {
+    display: -webkit-box;         
+    -webkit-box-orient: vertical; 
+    overflow: hidden;            
+    text-overflow: ellipsis;     
+    -webkit-line-clamp: 3;        
+  }
+  
 .Price-Btn button{
     padding: 0.5rem;
     border-radius: 20px;
@@ -44,6 +54,31 @@ body{
 .Price-Btn button:hover{
     background-color: rgb(107, 178, 1);
 }
+.Title{
+    display: -webkit-box;         
+    -webkit-box-orient: vertical; 
+    overflow: hidden;            
+    text-overflow: ellipsis;     
+    -webkit-line-clamp: 1;   
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+.cart-container{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+/* .cart-container:hover{
+    background-color: gray;
+    color: red;
+    padding: 0;
+} */
+.cart-container a{
+    text-decoration: none;
+    color: black;
+}
 @media screen and (min-width:425px) {
     .products {
         display: grid;
@@ -54,7 +89,7 @@ body{
 @media screen and (min-width:768px) {
     .products {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 33% 33% 33%;
     }
 }
 

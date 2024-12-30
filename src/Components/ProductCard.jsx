@@ -4,7 +4,7 @@ function ProductCard({ product, addtoCart, isProductPresent}) {
             <div className="Individual-Products">
                 <p>Category: {product.category}</p>
                 <img src={product.image} alt="Product Image"  />
-                <h3>{product.title}</h3>
+                <h3 className="Title">{product.title}</h3>
                 <p>{product.description}</p>
                 <div className="Price-Btn">
                     <span>Price: ${product.price}</span>
