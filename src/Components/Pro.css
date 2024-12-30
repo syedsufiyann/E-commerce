@@ -13,7 +13,7 @@ body{
 .products {
     display: grid;
     grid-template-columns: 100%;
-    gap: 2% 1%;
+    gap: 3rem 1%;
 }
 .Individual-Products {
     background-color: white;
@@ -83,6 +83,7 @@ p {
     .products {
         display: grid;
         grid-template-columns: 50% 50%;
+        gap:  1%;
     }
 }
 
@@ -90,6 +91,7 @@ p {
     .products {
         display: grid;
         grid-template-columns: 33% 33% 33%;
+        gap:3rem 1%;
     }
 }
 
