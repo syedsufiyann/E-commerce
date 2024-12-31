@@ -2,7 +2,7 @@ function ProductCard({ product, addtoCart, isProductPresent}) {
     return (
         <div >
             <div className="Individual-Products">
-                <p>Category: {product.category}</p>
+                <p className="category">Category: {product.category}</p>
                 <img src={product.image} alt="Product Image"  />
                 <h3 className="Title">{product.title}</h3>
                 <p>{product.description}</p>
