@@ -1,9 +1,17 @@
-const Cart = () => {
-    return(
-        <div className="cart">
-            Cart...
+import CartCard from "./CartCard";
+const Cart = ({ cartItems }) => {
+    console.log(cartItems.title);
+    
+    return (
+        cartItems.map((product) => {
+            return (
+                
+                <CartCard
+                    product={product}
+                />
+            )
 
-        </div>
+        })
     );
 }
 export default Cart;

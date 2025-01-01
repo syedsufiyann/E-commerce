@@ -19,7 +19,7 @@ const Router = () => {
                         />
                     }
                 />
-                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/cart" element={<Cart cartItems={cartItems} />} />
             </Routes>
         </BrowserRouter>
     );

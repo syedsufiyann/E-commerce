@@ -21,7 +21,6 @@ body{
     grid-template-columns: 100%;
     gap: 3rem 1%;
     margin: 2% 5%;
-    padding-top: 3rem;
 }
 .category{
     padding-top: 5px;
@@ -43,6 +42,29 @@ body{
     padding: 10px 0;
     object-fit: contain;
     border-radius: 20px;
+}
+.Cart-Products {
+    margin: 0.3rem 1.5rem;
+    background-color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    height: 100%;
+    border: 2px solid rgb(169, 175, 190);
+    display: flex;
+    
+}
+.Cart-Products img{
+    height: 5rem;
+    padding: 10px 0;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.Cart-Price{
+    padding: 10px 1rem;
+}
+.Cart-Price .Cart-Title{
+    font-size: 1rem;
+    padding-bottom: 5px;
 }
 .Price-Btn{
     display: flex;
@@ -84,7 +106,7 @@ nav{
     height: 3rem;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 999;
     
@@ -98,7 +120,8 @@ nav{
 }
 .cart{
     margin-top: 3rem;
-    text-align: center;
+
+    /* text-align: left; */
 }
 .cart-container{
     font-size: 1.1rem;
@@ -108,14 +131,49 @@ nav{
     text-decoration: none;
     color: black;
 }
+.link-home{
+    text-decoration: none;
+    color: black;
+}
 .link{
     text-decoration: none;
+}
+.cartnum{
+    font-size: 1rem;
+    vertical-align: top;
+    color: rgb(178, 14, 14);
 }
 @media screen and (min-width:425px) {
     .products {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 1.5rem 1%;
+    }
+    .Cart-Products {
+        margin: 0.3rem 1.5rem;
+        background-color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 10px;
+        height: 100%;
+        border: 2px solid rgb(169, 175, 190);
+        display: flex;
+        
+    }
+    .Cart-Products img{
+        /* width: ; */
+        height: 5rem;
+        padding: 10px 0;
+        object-fit: contain;
+        border-radius: 20px;
+        
+
+    }
+    .Cart-Price{
+        padding: 10px 1rem;
+    }
+    .Cart-Price .Cart-Title{
+        font-size: 1rem;
+        padding-bottom: 5px;
     }
 }
 
@@ -124,6 +182,30 @@ nav{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         gap:1.5rem 1%;
+    }
+    .Cart-Products {
+        margin: 0.3rem 1.5rem;
+        background-color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 10px;
+        height: 100%;
+        border: 2px solid rgb(169, 175, 190);
+        display: flex;
+        
+    }
+    .Cart-Products img{
+        /* width: ; */
+        height: 5rem;
+        padding: 10px 0;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+    .Cart-Price{
+        padding: 10px 1rem;
+    }
+    .Cart-Price .Cart-Title{
+        font-size: 1rem;
+        padding-bottom: 5px;
     }
 }
 
