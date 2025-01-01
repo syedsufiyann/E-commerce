@@ -44,27 +44,43 @@ body{
     border-radius: 20px;
 }
 .Cart-Products {
-    margin: 0.3rem 1.5rem;
+    margin: 0.3rem 0.4rem;
     background-color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0;
     border-radius: 10px;
     height: 100%;
     border: 2px solid rgb(169, 175, 190);
+    display: flex;
+    justify-content: space-between;
+    
+}
+.Cart-img-text {
+    margin: 0.3rem 1.5rem;
+    background-color: white;
+    /* padding: 0.3rem 1rem; */
     display: flex;
     
 }
 .Cart-Products img{
     height: 5rem;
+    width: 3rem;
     padding: 10px 0;
     object-fit: contain;
     border-radius: 20px;
+    display: none;
 }
 .Cart-Price{
-    padding: 10px 1rem;
+    /* padding: 10px ; */
 }
 .Cart-Price .Cart-Title{
     font-size: 1rem;
     padding-bottom: 5px;
+}
+
+.empty-cart{
+    padding-top: 40vh;
+    margin: 0 3rem;
+    text-align: center;
 }
 .Price-Btn{
     display: flex;
@@ -143,6 +159,33 @@ nav{
     vertical-align: top;
     color: rgb(178, 14, 14);
 }
+.remove-btn{
+    /* background-color: red; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.remove-btn button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 206, 206);
+    font-weight: 550;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.remove-btn button:hover{
+    background-color: rgb(249, 166, 166);
+}
+.qty-btns button{
+    background-color: none;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
 @media screen and (min-width:425px) {
     .products {
         display: grid;
@@ -160,13 +203,11 @@ nav{
         
     }
     .Cart-Products img{
-        /* width: ; */
         height: 5rem;
         padding: 10px 0;
         object-fit: contain;
         border-radius: 20px;
-        
-
+        display: block; 
     }
     .Cart-Price{
         padding: 10px 1rem;
