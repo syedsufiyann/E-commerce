@@ -4,6 +4,10 @@
 }
 body{
     background-color: rgb(210, 214, 223);
+    
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .loading {
     width: 100%;
@@ -29,7 +33,7 @@ body{
 .Individual-Products {
     background-color: white;
     padding: 0.3rem 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 100%;
     border: 2px solid rgb(169, 175, 190);
 }
@@ -75,25 +79,26 @@ p {
     -webkit-line-clamp: 1;   
 }
 nav{
-    background-color: rgb(144, 160, 230);
-    /* box-shadow: 3px solid green; */
+    background-color: rgb(217, 224, 239);
     width: 100%;
     height: 3rem;
-    /* padding: 0 3rem; */
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 9999;
-    border-bottom:2px solid rgb(47, 88, 192);
+    z-index: 999;
     
 }
 .heading{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 2% 7%;
+    margin: 0 10%;
     
+}
+.cart{
+    margin-top: 3rem;
+    text-align: center;
 }
 .cart-container{
     font-size: 1.1rem;
@@ -103,11 +108,14 @@ nav{
     text-decoration: none;
     color: black;
 }
+.link{
+    text-decoration: none;
+}
 @media screen and (min-width:425px) {
     .products {
         display: grid;
         grid-template-columns: 50% 50%;
-        gap: 3rem 1%;
+        gap: 1.5rem 1%;
     }
 }
 
@@ -115,7 +123,7 @@ nav{
     .products {
         display: grid;
         grid-template-columns: 33% 33% 33%;
-        gap:3rem 1%;
+        gap:1.5rem 1%;
     }
 }
 

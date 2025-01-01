@@ -3,11 +3,12 @@ import { useState } from "react";
 import "./Pro.css"
 import ProductCard from "./ProductCard";
 import Header from "./Header";
+import Router from "./Router";
+import { RotatingLines } from 'react-loader-spinner'
 
-function Product() {
+function Product({ cartItems, setCartItems }) {
     const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [cartItems, setCartItems] = useState([]);
     const fetchApi = async () => {
         setLoading(true)
         try {
@@ -29,7 +30,17 @@ function Product() {
     if (loading) {
         return (
             <div className="loading">
-                <h2>Products are loading...</h2>
+                <RotatingLines
+                    visible={true}
+                    height="96"
+                    width="96"
+                    color="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                />
             </div>
         )
     }
@@ -56,8 +67,6 @@ function Product() {
 
     return (
         <>
-            <Header cartItems={cartItems}
-            />
             <div className="products">
                 {renderProducts()}
             </div>
