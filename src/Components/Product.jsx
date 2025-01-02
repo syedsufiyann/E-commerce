@@ -6,7 +6,7 @@ import Header from "./Header";
 import Router from "./Router";
 import { RotatingLines } from 'react-loader-spinner'
 
-function Product({ cartItems, setCartItems }) {
+function Product({ cartItems, setCartItems, notify, Toaster }) {
     const [products, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
     const fetchApi = async () => {
@@ -47,6 +47,7 @@ function Product({ cartItems, setCartItems }) {
     const addtoCart = (item) => {
         setCartItems([...cartItems, item]);
         console.log(item);
+        notify("Added");
 
     }
     const renderProducts = () => {
@@ -64,11 +65,13 @@ function Product({ cartItems, setCartItems }) {
             })
         )
     }
+  
 
     return (
         <>
             <div className="products">
                 {renderProducts()}
+                <Toaster />
             </div>
         </>
     )

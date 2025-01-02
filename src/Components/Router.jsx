@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Product from "./Product";
 import Cart from "./Cart";
 import Header from "./Header";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const Router = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -21,6 +23,7 @@ const Router = () => {
             localStorage.setItem("cartItems", JSON.stringify(cartItems))
         }
     }, [cartItems])
+    const notify = (text) => toast(text);
 
     return (
         <BrowserRouter>
@@ -32,10 +35,23 @@ const Router = () => {
                         <Product
                             cartItems={cartItems}
                             setCartItems={setCartItems}
+                            notify={notify}
+                            Toaster={Toaster}
+
                         />
                     }
                 />
-                <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>} />
+                <Route
+                    path="/cart"
+                    element={
+                        <Cart
+                            cartItems={cartItems}
+                            setCartItems={setCartItems}
+                            notify={notify}
+                            Toaster={Toaster}
+                        />
+                    }
+                />
             </Routes>
         </BrowserRouter>
     );

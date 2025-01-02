@@ -1,6 +1,6 @@
 import CartCard from "./CartCard";
 import { Link } from "react-router-dom";
-const Cart = ({ cartItems, setCartItems }) => {
+const Cart = ({ cartItems, setCartItems, notify, Toaster }) => {
     console.log(cartItems.title);
 
     const onUpdateQty = (productId, quantity) => {
@@ -16,6 +16,7 @@ const Cart = ({ cartItems, setCartItems }) => {
     const onRemove = (productId) => {
         const filterCartItems = cartItems.filter((product) => (product.id !== productId))
         setCartItems(filterCartItems)
+        notify("Removed");
     }
 
     const getTotoal = () => {
@@ -51,6 +52,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                     />
                 )
             })}
+            <Toaster />
         </div>
     );
 }
