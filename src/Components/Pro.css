@@ -57,7 +57,6 @@ body{
 .Cart-img-text {
     margin: 0.3rem 1.5rem;
     background-color: white;
-    /* padding: 0.3rem 1rem; */
     display: flex;
     
 }
@@ -68,9 +67,6 @@ body{
     object-fit: contain;
     border-radius: 20px;
     display: none;
-}
-.Cart-Price{
-    /* padding: 10px ; */
 }
 .Cart-Price .Cart-Title{
     font-size: 1rem;
@@ -136,8 +132,6 @@ nav{
 }
 .cart{
     margin-top: 3rem;
-
-    /* text-align: left; */
 }
 .cart-container{
     font-size: 1.1rem;
@@ -181,11 +175,46 @@ nav{
 .qty-btns button{
     background-color: none;
     border: none;
-    padding: 5px 10px;
+    padding: 2px 8px;
     margin: 5px;
     border-radius: 10px;
 }
-
+.qty-btns button:hover{
+    background-color: rgb(195, 195, 195);
+}
+.total-backbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10%;
+}
+.total-backbtn button:hover, .empty-cart button:hover{
+    background-color: rgb(235, 235, 235);
+}
+.total-backbtn button{
+    cursor: pointer;
+    width: 3.5rem;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.empty-cart button{
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+.total-backbtn p{
+    font-weight: 550;
+    padding: 2px;
+}
+.total-backbtn .t-price{
+    color: rgb(0, 8, 255);
+}
 @media screen and (min-width:425px) {
     .products {
         display: grid;
@@ -193,7 +222,7 @@ nav{
         gap: 1.5rem 1%;
     }
     .Cart-Products {
-        margin: 0.3rem 1.5rem;
+        margin: 0.3rem 10%;
         background-color: white;
         padding: 0.3rem 1rem;
         border-radius: 10px;
@@ -225,13 +254,16 @@ nav{
         gap:1.5rem 1%;
     }
     .Cart-Products {
-        margin: 0.3rem 1.5rem;
+        margin: 0.3rem 10%;
         background-color: white;
         padding: 0.3rem 1rem;
         border-radius: 10px;
         height: 100%;
         border: 2px solid rgb(169, 175, 190);
         display: flex;
+        /* width: 50rem; */
+        /* margin: 0 ; */
+
         
     }
     .Cart-Products img{
