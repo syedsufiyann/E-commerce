@@ -5,7 +5,6 @@ import Cart from "./Cart";
 import Header from "./Header";
 import toast, { Toaster } from 'react-hot-toast';
 
-
 const Router = () => {
     const [cartItems, setCartItems] = useState([]);
 
@@ -16,8 +15,6 @@ const Router = () => {
             setCartItems(cartItems);
         }
     }, [])
-
-
     useEffect(() => {
         if (cartItems.length > 0) {
             localStorage.setItem("cartItems", JSON.stringify(cartItems))

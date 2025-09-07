@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./Pro.css"
 import ProductCard from "./ProductCard";
-import Header from "./Header";
-import Router from "./Router";
 import { RotatingLines } from 'react-loader-spinner'
 
 function Product({ cartItems, setCartItems, notify, Toaster }) {
@@ -65,8 +63,6 @@ function Product({ cartItems, setCartItems, notify, Toaster }) {
             })
         )
     }
-  
-
     return (
         <>
             <div className="products">
